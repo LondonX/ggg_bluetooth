@@ -1,0 +1,5 @@
+<resources>
+    <string name="network_err">网络连接异常，请检查网络设置</string>
+    <string name="fmt_network_err">服务器错误：%d</string>
+    <string name="dialog_progress_loading">正在加载</string>
+</resources>

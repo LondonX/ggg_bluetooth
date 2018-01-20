@@ -1,0 +1,67 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+//2017-12-15 add NumberExtensions operations by ByteBuffer
+//2017-12-20 add Float branch in JSONObject.getOrNull
+//2017-12-21 add KReceiver
+//2017-12-22 add Short.toBytes and CRC extensions
+//2018-01-03 upgrade fo api 27
+//           change Context.registerReceiver's action to vararg actions
+//           fix photo activity zoom out crush(by try catch)
+//2018-01-04 add SimpleFragmentPagerAdapter.kt
+//2018-01-16 remove test gradle implementation
+//           update glide to 4.5.0
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 27
+        versionCode 1
+        versionName "2018-01-16"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'com.android.support:appcompat-v7:27.0.2'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation 'com.github.chrisbanes:PhotoView:2.1.3'
+
+    //common libs
+
+    //glide
+    compile 'com.github.bumptech.glide:glide:4.5.0'
+    kapt 'com.github.bumptech.glide:compiler:4.5.0'
+    //SimpleAdapter
+    compile 'com.android.support:recyclerview-v7:27.0.2'
+    //save and load Pref
+    compile 'com.google.code.gson:gson:2.8.1'
+    compile 'com.github.salomonbrys.kotson:kotson:2.5.0'
+    //quick SnackBar SnackTool
+    compile 'com.android.support:design:27.0.2'
+    compile 'org.jetbrains.anko:anko:0.10.3'
+    //Networker
+    compile 'com.squareup.okhttp3:okhttp:3.9.0'
+    //any permissions
+    compile 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.4@aar'
+    compile "io.reactivex.rxjava2:rxjava:2.1.7"
+}
+repositories {
+    mavenCentral()
+}
+
+apply plugin: 'kotlin-android-extensions'

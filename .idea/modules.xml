@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ggg.iml" filepath="$PROJECT_DIR$/ggg.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kutil/kutil.iml" filepath="$PROJECT_DIR$/kutil/kutil.iml" />
+    </modules>
+  </component>
+</project>
