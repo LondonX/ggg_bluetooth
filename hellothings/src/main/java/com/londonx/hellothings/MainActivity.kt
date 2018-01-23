@@ -42,7 +42,7 @@ class MainActivity : Activity() {
             while (!isDestroyed) {
                 outPins.forEach {
                     it.value = !it.value
-                    Thread.sleep(100)
+                    Thread.sleep(200)
                 }
             }
             outPins.forEach {
